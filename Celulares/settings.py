@@ -1,6 +1,6 @@
 # Django settings for Celulares project.
 import os
-DEBUG = True
+DEBUG = False
 TEMPLATE_DEBUG = DEBUG
 
 ADMINS = (
@@ -23,7 +23,7 @@ DATABASES = {
 
 # Hosts/domain names that are valid for this site; required if DEBUG is False
 # See https://docs.djangoproject.com/en/1.5/ref/settings/#allowed-hosts
-ALLOWED_HOSTS = ['celulares.herokuapp.com']
+ALLOWED_HOSTS = ['*']
 
 # Local time zone for this installation. Choices can be found here:
 # http://en.wikipedia.org/wiki/List_of_tz_zones_by_name
@@ -127,7 +127,7 @@ INSTALLED_APPS = (
     'django.contrib.admindocs',
     'Celulares.apps.ventas',
     'Celulares.apps.webservices.ws_productos',
-    'rest_framework',
+    #'rest_framework',
     'gunicorn',
 )
 SESSION_SERIALIZER = 'django.contrib.sessions.serializers.JSONSerializer'
@@ -160,12 +160,12 @@ LOGGING = {
     }
 }
 
-# Aqui va la configuracion del servidor de GMAIL
+'''# Aqui va la configuracion del servidor de GMAIL
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = '587'
 EMAIL_HOST_USER = 'ortizandres94@misena.edu.co'
 EMAIL_HOST_PASsWORD = 'capricornio1'
-EMAIL_USE_TLS = True
+EMAIL_USE_TLS = True'''
 
 REST_FRAMEWORK = {
     # Use Django's standard `django.contrib.auth` permissions,

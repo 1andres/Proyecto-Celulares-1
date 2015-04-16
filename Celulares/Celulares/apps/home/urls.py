@@ -7,6 +7,5 @@ urlpatterns = patterns('Celulares.apps.home.views',
 	    url(r'^login/$', 'login_view', name = 'vista_login'),
 	    url(r'^logout/$', 'logout_view', name = 'vista_logout'),
 	    url(r'^celulares/page/(?P<pagina>.*)/$','celulares_view', name = 'vista_celulares'),
-		url(r'^celular/(?P<id_celular>.*)/$', 'single_celular_view', name = 'vista_celular'),
-		
+		url(r'^celular/(?P<id_celular>.*)/$', 'single_celular_view', name = 'vista_celular'),	
 	)	    

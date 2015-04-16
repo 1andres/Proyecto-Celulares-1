@@ -15,5 +15,5 @@ urlpatterns = patterns('',
     url(r'^',include('Celulares.apps.home.urls')),
     url(r'^',include('Celulares.apps.ventas.urls')),
     url(r'^media/(?P<path>.*)$','django.views.static.serve',{'document_root':settings.MEDIA_ROOT}),
-    url(r'^',include('Celulares.apps.webservices.ws_productos.urls')),
+    url(r'^',include('Celulares.apps.webservices.ws_productos.urls'))
 )
