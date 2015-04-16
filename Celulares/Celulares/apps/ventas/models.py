@@ -1,5 +1,5 @@
 from django.db import models
-from django.conf.urls.defaults import url
+
 
 # Create your models here.
 
