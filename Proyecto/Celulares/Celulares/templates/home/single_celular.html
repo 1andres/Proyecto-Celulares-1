@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block title %}
+	celular
+{% endblock %}
+
+{% block content %}
+	<h3>Caracteristicas del movil</h3>
+	<h2>{{ celular.marca }} {{ celular.modelo }} {{ celular.color }}</h2>
+	<br>
+	<p>{{ celular.descripcion }}</p>
+
+
+	{% if celular.imagen %}
+	<img src="/media/{{ celular.imagen }}" width ="80px" heigth ="80px">
+	{% endif %}
+	<br>
+	<p><b>Marca:    </b>{{ celular.marca }}</p>
+	<p><b>Modelo:   </b>{{ celular.modelo }}</p>
+	<p><b>Color:    </b>{{ celular.color }} </p>
+	<br>
+	<a href ="/celulares/page/1">Mostrar lista de Productos</a>
+{% endblock %}

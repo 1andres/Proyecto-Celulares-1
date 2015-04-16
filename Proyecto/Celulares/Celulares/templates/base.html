@@ -1,0 +1,83 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title> {% block title %}  Bienvenidos {% endblock %}</title>
+
+	<link rel="stylesheet" type="text/css" href="/media/Bootstrap/bootstrap/css/bootstrap.css"/>
+	<link rel="stylesheet" type="text/css" href="/media/Bootstrap/bootstrap/css/bootstrap-responsive.min.css"/>
+	<link rel="stylesheet" type="text/css" href="/media/bootstrap/css/bootstrap-responsive.css/"/>
+	<link rel="stylesheet" type="text/css" href="/media/css/estilo.css"/>
+
+	<script src="/media/js/ajax.js"></script>
+	<script src="/media/js/holder.js"></script>
+	<script src="/media/js/jquery-ui.js"></script>
+	<script src="/media/js/jquery.js"></script>
+	<script src="/media/Bootstrap/bootstrap/js/bootstrap.js"></script>
+
+	<style type="text/css">
+		body{
+			padding-top: 60px;
+			padding-bottom:  40px;
+		}
+		.hero.unit{			padding-top: 39px;}
+		.sidebar-nav{		padding: 9px;}
+	</style>
+
+</head>
+<body>
+
+	<div class="navbar navbar-inverse navbar-fixed-top">
+		<div class = "navbar-inner">
+			<a class ="brand" href="{% url 'vista_principal' %}">Catalogo de Celulares</a>
+			<ul class = "nav">
+				<li><a href="/celulares/page/1">Productos</a></li>
+				<li><a href="{% url 'vista_about' %}">Acerca de...</a></li>
+				<li><a href="{% url 'vista_contacto'%}">Contacto</a></li>
+				{% if user.is_authenticated %}
+					<li><a href = "{% url 'vista_logout' %}">Cerrar Sesion</a> </li>
+				{% else %}
+					<li><a href = "{% url 'vista_login' %}">Login</a></li> 
+				{% endif %}
+			</ul>
+		</div>
+	</div>
+	<div class="container-fluid">
+		<div class="row-fluid">
+			<div class="span9">
+				<div class="hero-unit">
+					{% block content %}
+					{% endblock %}
+				</div>
+			</div>
+			<div class="span3">
+				<div class="well sidebar-nav">
+					<div class="nav nav-list">
+						<li class="nav-header"><center>Mi proyecto en Python</center></li>
+						<br>
+						<div align="center">
+							<img src="/media/images/sena.jpg"WIDTH=70 HEIGHT=70 BORDER=2 VSPACE=3 HSPACE=3>
+						</div>
+						<h4><center>Informacion</center></h4>
+						<div class="alert alert-info">
+							<h5>Catalogo Virtual</h5>
+							<p><b>Direccion</b>:calle 66N 16-11</p>
+							<p><b>Telefono</b>: 3105322113</p>
+							<p>Popayan - Cauca</p>
+						</div>
+						<div align="center">
+							<img src="/media/images/django.gif">
+						</div>
+						<p>
+						<div align="center">
+							<a href="https://www.facebook.com.co"><img src="/media/images/facebook.jpg">
+							<img src="/media/images/twitter.jpg"></a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<br>
+		</div>
+	</div>
+</body>
+
+<html>
