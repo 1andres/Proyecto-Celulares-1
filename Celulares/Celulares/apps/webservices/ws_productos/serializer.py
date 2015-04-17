@@ -1,4 +1,4 @@
-#from rest_framework import serializers
+from rest_framework import serializers
 from Celulares.apps.ventas.models import Celular, Marca, Color, Conectividad
 
 class celular_serializer(serializers.HyperlinkedModelSerializer):

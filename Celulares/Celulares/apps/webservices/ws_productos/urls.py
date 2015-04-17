@@ -1,6 +1,6 @@
 from django.conf.urls.defaults import patterns, url
 from django.conf.urls import include
-#from rest_framework import routers
+from rest_framework import routers
 from Celulares.apps.webservices.ws_productos.views import *
 router = routers.DefaultRouter()
 router.register(r'celular', celular_viewset)
