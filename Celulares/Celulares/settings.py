@@ -126,9 +126,9 @@ INSTALLED_APPS = (
     # Uncomment the next line to enable admin documentation:
     'django.contrib.admindocs',
     'Celulares.apps.ventas',
-    #'Celulares.apps.webservices.ws_productos',
-    #'rest_framework',
-    #s'gunicorn',
+    'Celulares.apps.webservices.ws_productos',
+    'rest_framework',
+    'gunicorn',
 )
 SESSION_SERIALIZER = 'django.contrib.sessions.serializers.JSONSerializer'
 # A sample logging configuration. The only tangible logging
@@ -167,11 +167,11 @@ EMAIL_HOST_USER = 'ortizandres94@misena.edu.co'
 EMAIL_HOST_PASsWORD = 'capricornio1'
 EMAIL_USE_TLS = True
 
-'''REST_FRAMEWORK = {
+
+REST_FRAMEWORK = {
     # Use Django's standard `django.contrib.auth` permissions,
     # or allow read-only access for unauthenticated users.
     'DEFAULT_PERMISSION_CLASSES': [
         'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly'
     ]
 }
-'''
