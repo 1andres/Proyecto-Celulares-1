@@ -23,7 +23,7 @@ DATABASES = {
 
 # Hosts/domain names that are valid for this site; required if DEBUG is False
 # See https://docs.djangoproject.com/en/1.5/ref/settings/#allowed-hosts
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['celudemo.herokuapp.com']
 
 # Local time zone for this installation. Choices can be found here:
 # http://en.wikipedia.org/wiki/List_of_tz_zones_by_name
@@ -161,11 +161,11 @@ LOGGING = {
 }
 
 # Aqui va la configuracion del servidor de GMAIL
-EMAIL_HOST = 'smtp.gmail.com'
+'''EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = '587'
 EMAIL_HOST_USER = 'ortizandres94@misena.edu.co'
 EMAIL_HOST_PASsWORD = 'capricornio1'
-EMAIL_USE_TLS = True
+EMAIL_USE_TLS = True'''
 
 
 REST_FRAMEWORK = {
