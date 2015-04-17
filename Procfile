@@ -1,1 +1,0 @@
-web: gunicorn Celulares.wsgi -b 0.0.0.0:$PORT
